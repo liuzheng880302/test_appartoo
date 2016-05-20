@@ -1,0 +1,8 @@
+services:
+#    zheng_user.example:
+#        class: ZHENG\UserBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
+    zheng_user.form.registration:
+        class: ZHENG\UserBundle\Form\RegistrationType
+        tags:
+            - { name: form.type, alias: zheng_user_registration }

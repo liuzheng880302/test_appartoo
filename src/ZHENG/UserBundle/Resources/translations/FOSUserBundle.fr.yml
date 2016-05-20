@@ -1,0 +1,5 @@
+
+registration:
+    email:
+        subject: 'Bienvenue %username% !'
+        message: "Salut %username% !\n\nPour valider votre compte utilisateur, merci de vous rendre sur %confirmationUrl%\n\nCordialement,\nL'équipe ZHENG.\n"
