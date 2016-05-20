@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>User creation</h1>
+
+    {% form_theme form ":FormTemplate:bootstrap.html.twig" %}
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input style="margin-top: 10px; margin-bottom: 10px" type="submit" value="Create" class="btn btn-info"/>
+    {{ form_end(form) }}
+
+    <a style="margin-top: 10px; margin-bottom: 10px" href="{{ path('user_index') }}" class="btn btn-primary">Back to the list</a>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Contacts list</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Prenom</th>
+                <th>Nom</th>
+                <th>Portable</th>
+                <th>Adresse</th>
+                <th>Site</th>
+                <th>Id_user</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+                <td><a href="{{ path('contacts_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.prenom }}</td>
+                <td>{{ contact.nom }}</td>
+                <td>{{ contact.portable }}</td>
+                <td>{{ contact.adresse }}</td>
+                <td>{{ contact.site }}</td>
+                <td>{{ contact.iduser }}</td>
+                <td>
+                    <div class="btn-group-sm">
+                        <a href="{{ path('contacts_show', { 'id': contact.id }) }}" class="btn btn-xs btn-success">show</a>
+                        <a href="{{ path('contacts_edit', { 'id': contact.id }) }}" class="btn btn-xs btn-warning">edit</a>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('contacts_new') }}" class="btn btn-info">Create a new contact</a>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+zheng_user_user:
+    resource: "@ZHENGUserBundle/Controller/UserController.php"
+    type:     annotation
+
+zheng_user_user:
+    resource: "@ZHENGUserBundle/Controller/UserController.php"
+    type:     annotation
+
+zheng_user_user:
+    resource: "@ZHENGUserBundle/Controller/UserController.php"
+    type:     annotation
+
+
+app_contacts:
+    resource: "@AppBundle/Controller/ContactsController.php"
+    type:     annotation
+
+zheng_user:
+    resource: "@ZHENGUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

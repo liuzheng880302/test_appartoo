@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: 8889
+    database_name: appartoo
+    database_user: root
+    database_password: charles
+    mailer_transport: gmail
+    mailer_host: null
+    mailer_user: null
+    mailer_password: null
+    secret: 51d5a1777aa617bb3b5f0e75d30edc7ae10dd216

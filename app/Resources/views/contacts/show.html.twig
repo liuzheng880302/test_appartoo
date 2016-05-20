@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Contacts</h1>
+
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ contact.id }}</td>
+            </tr>
+            <tr>
+                <th>Id_user</th>
+                <td>{{ contact.iduser }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ contact.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ contact.nom }}</td>
+            </tr>
+            <tr>
+                <th>Portable</th>
+                <td>{{ contact.portable }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ contact.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Site</th>
+                <td>{{ contact.site }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ contact.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="btn-group-vertical">
+        {{ form_start(delete_form) }}
+        <a class="btn btn-primary" href="{{ path('contacts_index') }}">Back to the list</a>
+        <a class="btn btn-warning" href="{{ path('contacts_edit', { 'id': contact.id }) }}">Edit</a>
+        <input class="btn btn-danger" type="submit" value="Delete">
+        {{ form_end(delete_form) }}</tr>
+    </div>
+
+
+
+{% endblock %}
